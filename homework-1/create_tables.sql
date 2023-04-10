@@ -3,6 +3,7 @@ CREATE TABLE employees
 (
 	employee_id serial PRIMARY KEY,
 	employee_name varchar(100) NOT NULL,
+	birth_date varchar(100) NOT NULL,
 	profession varchar(100) NOT NULL,
     notes text NOT NULL
 );
@@ -10,7 +11,8 @@ CREATE TABLE employees
 CREATE TABLE customers
 (
 	customer_id varchar(5) PRIMARY KEY NOT NULL,
-	company_name varchar(50) NOT NULL
+	company_name varchar(50) NOT NULL,
+	contact_name varchar(50) NOT NULL
 );
 
 CREATE TABLE orders

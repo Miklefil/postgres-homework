@@ -19,10 +19,10 @@ def main():
         with conn:
             with conn.cursor() as cur:
 
-                cur.executemany('INSERT INTO employees (employee_name, profession, notes) '
-                                'VALUES(%s, %s, %s)', employees)
-                cur.executemany('INSERT INTO customers(customer_id, company_name) '
-                                'VALUES(%s, %s)', customers)
+                cur.executemany('INSERT INTO employees (employee_name, profession, notes, birth_date) '
+                                'VALUES(%s, %s, %s, %s)', employees)
+                cur.executemany('INSERT INTO customers(customer_id, company_name, contact_name) '
+                                'VALUES(%s, %s, %s)', customers)
                 cur.executemany('INSERT INTO orders(order_id, customer_id, employee_id, order_date, city) '
                                 'VALUES(%s, %s, %s, %s, %s)', orders)
 

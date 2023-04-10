@@ -11,13 +11,15 @@ def get_data_from_csv(key: str, path: str) -> list:
                 name = (row['first_name'] + ' ' + row['last_name'])
                 profession = row['title']
                 notes = row['notes']
-                data.append((name, profession, notes))
+                birth_date = row['birth_date']
+                data.append((name, profession, notes, birth_date))
 
         elif key == 'customers':
             for row in reader:
                 customer_id = row['customer_id']
                 company_name = row['company_name']
-                data.append((customer_id, company_name))
+                contact_name = row['contact_name']
+                data.append((customer_id, company_name, contact_name))
 
         elif key == 'orders':
             for row in reader:
